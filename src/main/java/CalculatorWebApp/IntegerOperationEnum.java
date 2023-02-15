@@ -1,6 +1,6 @@
 package CalculatorWebApp;
 
-public enum IntegerOperation
+public enum IntegerOperationEnum
 {
     ADD,
     MULT,
