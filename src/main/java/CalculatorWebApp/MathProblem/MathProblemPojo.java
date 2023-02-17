@@ -1,4 +1,6 @@
-package CalculatorWebApp;
+package CalculatorWebApp.MathProblem;
+
+import CalculatorWebApp.IntegerOperationEnum;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -11,7 +13,15 @@ public class MathProblemPojo
 {
     private final List<BigDecimal> inputs;
     private final IntegerOperationEnum operation;
+
     private BigDecimal result;
+
+    public MathProblemPojo(List<BigDecimal> inputs, IntegerOperationEnum operation, BigDecimal result)
+    {
+        this.inputs = inputs;
+        this.operation = operation;
+        this.result = result;
+    }
 
     public MathProblemPojo(List<BigDecimal> inputs, IntegerOperationEnum operation)
     {
