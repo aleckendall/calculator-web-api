@@ -4,6 +4,7 @@ import CalculatorWebApp.MathProblem.MathProblemResource;
 import io.confluent.rest.Application;
 import io.confluent.rest.RestConfig;
 import io.confluent.rest.RestConfigException;
+import io.swagger.v3.jaxrs2.integration.resources.OpenApiResource;
 import org.eclipse.jetty.security.ConstraintMapping;
 import org.eclipse.jetty.security.authentication.LoginAuthenticator;
 import org.eclipse.jetty.util.security.Constraint;
@@ -21,6 +22,7 @@ public class CalculatorApplication extends Application<CalculatorConfig>
     @Override
     public void setupResources(Configurable<?> config, CalculatorConfig appConfig) {
         config.register(new MathProblemResource(appConfig));
+        config.register(new OpenApiResource());
     }
 
     @Override

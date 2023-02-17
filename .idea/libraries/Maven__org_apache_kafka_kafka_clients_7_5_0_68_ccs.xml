@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.kafka:kafka-clients:7.5.0-68-ccs">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/7.5.0-68-ccs/kafka-clients-7.5.0-68-ccs.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/7.5.0-68-ccs/kafka-clients-7.5.0-68-ccs-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/7.5.0-68-ccs/kafka-clients-7.5.0-68-ccs-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
