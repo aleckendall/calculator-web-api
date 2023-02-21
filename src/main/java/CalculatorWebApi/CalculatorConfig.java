@@ -1,4 +1,4 @@
-package CalculatorWebApp;
+package CalculatorWebApi;
 
 import io.confluent.rest.RestConfig;
 import org.apache.kafka.common.config.ConfigDef;

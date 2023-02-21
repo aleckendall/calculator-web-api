@@ -1,17 +1,13 @@
-package CalculatorWebApp;
+package CalculatorWebApi;
 
-import CalculatorWebApp.MathProblem.MathProblemResource;
-import CalculatorWebApp.MathProblem.MathProblemService;
-import CalculatorWebApp.MathProblem.MathProblemPojo;
-import CalculatorWebApp.MathProblem.MathProblemPojoDeserializer;
+import CalculatorWebApi.MathProblem.MathProblemResource;
+import CalculatorWebApi.MathProblem.MathProblemService;
+import CalculatorWebApi.MathProblem.MathProblemPojo;
+import CalculatorWebApi.MathProblem.MathProblemPojoDeserializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import io.confluent.rest.EmbeddedServerTestHarness;
-import io.confluent.rest.RestConfig;
 import io.confluent.rest.RestConfigException;
-import okhttp3.Interceptor;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
 import org.junit.jupiter.api.Test;
 
 import retrofit2.Call;
@@ -20,9 +16,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
 
 import java.io.IOException;
-import java.util.Base64;
 import java.util.List;
-import java.util.TreeMap;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

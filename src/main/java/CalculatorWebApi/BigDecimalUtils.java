@@ -1,4 +1,4 @@
-package CalculatorWebApp;
+package CalculatorWebApi;
 
 import java.math.BigDecimal;
 import java.util.Arrays;

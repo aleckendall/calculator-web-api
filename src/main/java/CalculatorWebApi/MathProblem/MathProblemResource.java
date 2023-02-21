@@ -1,8 +1,8 @@
-package CalculatorWebApp.MathProblem;
+package CalculatorWebApi.MathProblem;
 
-import CalculatorWebApp.*;
-import CalculatorWebApp.CalculatorConfig;
-import CalculatorWebApp.IntegerOperationEnum;
+import CalculatorWebApi.*;
+import CalculatorWebApi.CalculatorConfig;
+import CalculatorWebApi.IntegerOperationEnum;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;

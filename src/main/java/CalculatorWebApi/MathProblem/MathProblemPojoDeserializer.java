@@ -1,6 +1,6 @@
-package CalculatorWebApp.MathProblem;
+package CalculatorWebApi.MathProblem;
 
-import CalculatorWebApp.IntegerOperationEnum;
+import CalculatorWebApi.IntegerOperationEnum;
 import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;

@@ -1,6 +1,6 @@
-package CalculatorWebApp.MathProblem;
+package CalculatorWebApi.MathProblem;
 
-import CalculatorWebApp.IntegerOperationEnum;
+import CalculatorWebApi.IntegerOperationEnum;
 
 import java.math.BigDecimal;
 import java.util.List;

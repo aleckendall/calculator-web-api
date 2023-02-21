@@ -31,7 +31,7 @@
     </build>
 
     <groupId>org.aleckendall.calculator</groupId>
-    <artifactId>calculator-web-app</artifactId>
+    <artifactId>calculator-web-api</artifactId>
     <version>1.0</version>
 
     <properties>

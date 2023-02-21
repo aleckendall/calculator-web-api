@@ -1,6 +1,6 @@
-package CalculatorWebApp;
+package CalculatorWebApi;
 
-import CalculatorWebApp.MathProblem.MathProblemResource;
+import CalculatorWebApi.MathProblem.MathProblemResource;
 import io.confluent.rest.Application;
 import io.confluent.rest.RestConfig;
 import io.confluent.rest.RestConfigException;
@@ -30,7 +30,7 @@ public class CalculatorApplication extends Application<CalculatorConfig>
     {
         String method = this.config.getString("authentication.method");
         if(method.equalsIgnoreCase(RestConfig.AUTHENTICATION_METHOD_BASIC))
-            return new DummyAuthenticator();
+            return new DummyBasicAuthenticator();
         throw new UnsupportedOperationException("Not allowed !");
     }
 

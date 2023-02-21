@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="calculator-web-app" />
+        <module name="calculator-web-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="calculator-web-app" target="19" />
+      <module name="calculator-web-api" target="19" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,4 +1,4 @@
-package CalculatorWebApp;
+package CalculatorWebApi;
 
 public enum IntegerOperationEnum
 {
