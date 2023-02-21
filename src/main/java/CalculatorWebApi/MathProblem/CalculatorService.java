@@ -6,7 +6,7 @@ import retrofit2.http.Query;
 
 import java.util.List;
 
-public interface MathProblemService
+public interface CalculatorService
 {
     @GET("calculator/addition")
     Call<Void> doAddition(@Query("inputs") String[] inputs);

@@ -1,7 +1,7 @@
 package CalculatorWebApi;
 
-import CalculatorWebApi.MathProblem.MathProblemResource;
-import CalculatorWebApi.MathProblem.MathProblemService;
+import CalculatorWebApi.MathProblem.CalculatorResource;
+import CalculatorWebApi.MathProblem.CalculatorService;
 import CalculatorWebApi.MathProblem.MathProblemPojo;
 import CalculatorWebApi.MathProblem.MathProblemPojoDeserializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -20,15 +20,15 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MathProblemResourceTest
+public class CalculatorResourceTest
         extends EmbeddedServerTestHarness<CalculatorConfig, CalculatorApplication>
 {
-    private final MathProblemService _service;
+    private final CalculatorService _service;
     private final String BaseUrl = "http://localhost:9998";
 
-    public MathProblemResourceTest() throws RestConfigException
+    public CalculatorResourceTest() throws RestConfigException
     {
-        addResource(new MathProblemResource(config));
+        addResource(new CalculatorResource(config));
 
         ObjectMapper mapper = new ObjectMapper();
         SimpleModule module = new SimpleModule();
@@ -40,7 +40,7 @@ public class MathProblemResourceTest
                 .addConverterFactory(JacksonConverterFactory.create(mapper))
                 .build();
 
-        _service = retrofit.create(MathProblemService.class);
+        _service = retrofit.create(CalculatorService.class);
     }
 
     @Test

@@ -1,6 +1,6 @@
 package CalculatorWebApi;
 
-import CalculatorWebApi.MathProblem.MathProblemResource;
+import CalculatorWebApi.MathProblem.CalculatorResource;
 import io.confluent.rest.Application;
 import io.confluent.rest.RestConfig;
 import io.confluent.rest.RestConfigException;
@@ -21,7 +21,7 @@ public class CalculatorApplication extends Application<CalculatorConfig>
 
     @Override
     public void setupResources(Configurable<?> config, CalculatorConfig appConfig) {
-        config.register(new MathProblemResource(appConfig));
+        config.register(new CalculatorResource(appConfig));
         config.register(new OpenApiResource());
     }
 
@@ -36,10 +36,11 @@ public class CalculatorApplication extends Application<CalculatorConfig>
 
     @Override
     protected ConstraintMapping createGlobalAuthConstraint() {
-        final Constraint constraint = new Constraint();
+        Constraint constraint = new Constraint();
         constraint.setAuthenticate(true);
+        constraint.setRoles(new String[]{"admin"}); // Note: decorating resource with @PermitAll had no effect
 
-        final ConstraintMapping mapping = new ConstraintMapping();
+        ConstraintMapping mapping = new ConstraintMapping();
         mapping.setConstraint(constraint);
         mapping.setMethod("*");
         mapping.setPathSpec("/calculator/audit");

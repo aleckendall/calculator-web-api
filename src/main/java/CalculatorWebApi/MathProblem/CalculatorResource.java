@@ -4,6 +4,7 @@ import CalculatorWebApi.*;
 import CalculatorWebApi.CalculatorConfig;
 import CalculatorWebApi.IntegerOperationEnum;
 
+import javax.annotation.security.PermitAll;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -13,12 +14,13 @@ import java.util.List;
 
 @Path("/calculator")
 @Produces(MediaType.APPLICATION_JSON)
-public class MathProblemResource {
+@PermitAll
+public class CalculatorResource {
     CalculatorConfig config;
 
     private List<MathProblemPojo> mathProblems = new ArrayList<>();
 
-    public MathProblemResource(CalculatorConfig config)
+    public CalculatorResource(CalculatorConfig config)
     {
         this.config = config;
     }

@@ -14,13 +14,14 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.attribute.UserPrincipal;
 import java.security.Principal;
 import java.util.Base64;
 
 public class DummyBasicAuthenticator extends BasicAuthenticator
 {
     @Override
-    public Authentication validateRequest(ServletRequest req, ServletResponse res, boolean mandatory) throws ServerAuthException
+    public Authentication validateRequest(ServletRequest req, ServletResponse res, boolean mandatory)
     {
         HttpServletRequest request = (HttpServletRequest)req;
         String credentials = request.getHeader(HttpHeader.AUTHORIZATION.asString());
@@ -64,12 +65,17 @@ public class DummyBasicAuthenticator extends BasicAuthenticator
 
         @Override
         public Subject getSubject() {
-            return null;
+            return new Subject();
         }
 
         @Override
         public Principal getUserPrincipal() {
-            return null;
+            return new UserPrincipal() {
+                @Override
+                public String getName() {
+                    return "admin";
+                }
+            };
         }
 
         @Override
